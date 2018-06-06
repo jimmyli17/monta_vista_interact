@@ -2,8 +2,8 @@
   <h1>Events</h1>
  
          
-    <% if @events.order("date").each != nil %>
-  
+        <% if @events.order("date").each == nil %>
+          <% end %>
   
   <% @events.order("date").each do |event| %>  
   
