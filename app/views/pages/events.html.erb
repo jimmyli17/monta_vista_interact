@@ -1,9 +1,5 @@
 <div class="container">
   <h1>Events</h1>
- 
-         
-        <% if @events.order("date").each == nil %>
-          <% end %>
   
   <% @events.order("date").each do |event| %>  
   
@@ -42,7 +38,7 @@
   <form action="/sessions/new">
     <input class="submit" type="submit" value="Sign Up">
   </form>
-  <% elsif (event.sign_ups >= event.maximum) && (b.blank?) %>
+  <% elsif (event.sign_ups != nil) && (event.sign_ups >= event.maximum) && (b.blank?) %>
   <p>This event is full. Better luck next time.</p>
   <% elsif b.blank? %>
   <form action="/events/<%=event.id%>/create_signup">
