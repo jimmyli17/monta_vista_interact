@@ -1,7 +1,8 @@
 <div class="container">
   <h1>Events</h1>
  
-          <% if event != nil %>
+          <% if event == nil %>
+              <% end %>
   
   <% @events.order("date").each do |event| %>  
   
