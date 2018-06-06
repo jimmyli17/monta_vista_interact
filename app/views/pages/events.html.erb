@@ -1,5 +1,8 @@
 <div class="container">
   <h1>Events</h1>
+ 
+          <% if event != nil %>
+  
   <% @events.order("date").each do |event| %>  
   
   <% if event.maximum != nil %> 
